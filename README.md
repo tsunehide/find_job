@@ -7,7 +7,7 @@ git clone https://github.com/smaru1111/find_job
 ```
 
 ## ローカルの起動
-Nodo.jsが入ってない人は、インストールしてください。
+Nodo.jsが入ってない人は、インストールしてください。<br>
 https://nodejs.org/ja
 ```
 node -v
