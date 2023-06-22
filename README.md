@@ -3,7 +3,7 @@
 
 ## リポジトリをクローン
 ```
-git clone https://github.com/smaru1111/univ_debut_fe_after
+git clone https://github.com/smaru1111/find_job
 ```
 
 ## ローカルの起動
