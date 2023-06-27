@@ -2,6 +2,7 @@
 import React, {useMemo} from 'react'
 import Select from 'react-select'
 import style from './WorkSelect.module.scss'
+import Image from 'next/image'
 
 export type UseSelectProps = {
   selected: Work | null;
@@ -61,6 +62,11 @@ function convertToOption(work: Work): WorkOption {
     name: work.name,
   };
 }
+const renderIcon = () => {
+  return (
+    <Image src="/dropdown.svg" width={10} height={10} alt={''} className='w-[10px] h-[10px]'/>
+  )
+}
 
 export const WorkSelect: React.FC<UseSelectProps> = ({selected, setWork}) => {
   const value = useMemo(
@@ -72,7 +78,7 @@ export const WorkSelect: React.FC<UseSelectProps> = ({selected, setWork}) => {
       setWork(convertToWork(newWork));
   };
 
-
+  
   return (
     <>
       <Select
@@ -82,8 +88,10 @@ export const WorkSelect: React.FC<UseSelectProps> = ({selected, setWork}) => {
         value={value}
         onChange={onChange}
         options={sampleData.map(convertToOption)}
+        // arrowRenderer={renderIcon}
         components={{
           IndicatorSeparator: () => null,
+          DropdownIndicator:() => renderIcon(),
         }}
       />
     </>

@@ -15,7 +15,7 @@ const Home: React.FC = () => {
             </div>
             <WorkSelect selected={work} setWork={setWork}/>
           </div>
-          <button type="submit" className=' text-sm px-10 py-2 bg-white text-primary rounded-full tracking-wide mt-4'>検索する</button>
+          <button type="submit" className=' text-sm px-10 py-2 bg-white text-primary rounded-full tracking-wide mt-7 mb-3'>検索する</button>
         </div>
       </div>
     </>
