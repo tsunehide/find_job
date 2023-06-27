@@ -1,7 +1,13 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import './globals.scss'
+import { Sawarabi_Gothic } from '@next/font/google'
+import React from 'react'
+import Header from "./components/Header"
 
-const inter = Inter({ subsets: ['latin'] })
+const Sawarabi = Sawarabi_Gothic({
+  weight: "400",
+  display: "swap",
+  preload: false,
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={Sawarabi.className}>
+        <Header></Header>
+        {children}
+      </body>
     </html>
   )
 }
