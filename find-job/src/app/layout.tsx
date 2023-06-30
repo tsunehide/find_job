@@ -2,6 +2,7 @@ import './globals.scss'
 import { Sawarabi_Gothic } from "next/font/google"
 import React from 'react'
 import Header from "./components/Header"
+import Footer from "./components/Footer"
 
 const Sawarabi = Sawarabi_Gothic({
   weight: "400",
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={Sawarabi.className}>
         <Header></Header>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   )

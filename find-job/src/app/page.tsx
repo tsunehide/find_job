@@ -30,7 +30,7 @@ const Home: React.FC = () => {
         <div className='flex flex-col  px-16 md:pt-20 pt-16 pb-10 bg-primary mt-14 rounded-xl'>
           <p className='text-white md:text-xl text-base text-center mt-2'>
             このサイトについてアンケートのご協力をお願いします！
-            </p>
+          </p>
           <button type="submit" className='text-xs px-5 py-2 bg-white text-primary rounded-full tracking-wide mx-auto mt-7'>アンケートに答える</button>
         </div>
         <div className=' relative bg-primary clip'>
