@@ -1,5 +1,5 @@
 import './globals.scss'
-import { Sawarabi_Gothic } from '@next/font/google'
+import { Sawarabi_Gothic } from "next/font/google"
 import React from 'react'
 import Header from "./components/Header"
 
