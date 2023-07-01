@@ -11,55 +11,55 @@ export type UseSelectProps = {
 
 export type Work = {
   id: number;
-  name: string;
+  salary: number;
 }
 
 const sampleData: Work[] = [
   {
     id: 1,
-    name: "飲食店",
+    salary: 900,
   },
   {
     id: 2,
-    name: "コンビニ",
+    salary: 1000,
   },
   {
     id: 3,
-    name: "ファミレス",
+    salary: 1100,
   },
   {
     id: 4,
-    name: "居酒屋",
+    salary: 1200,
   },
   {
     id: 5,
-    name: "カフェ",
+    salary: 1300,
   },
   {
     id: 6,
-    name: "その他",
+    salary: 1400,
   },
 ]
 
 type WorkOption = {
   label: string;
   value: number;
-  name: string;
+  salary: number;
 }
 
 function convertToWork(args: WorkOption | null): Work | null {
   if (!args) return null;
   return {
     id: args.value,
-    name: args.name,
+    salary: args.salary,
   };
 }
 
 function convertToOption(work: Work): WorkOption {
   return {
-    label: work.name,
+    label: work.salary.toString() + "~",
     value: work.id,
-    name: work.name,
+    salary: work.salary,
   };
 }
 const renderIcon = () => {
