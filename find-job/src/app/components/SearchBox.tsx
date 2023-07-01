@@ -16,7 +16,7 @@ const SearchBox = () => {
           </div>
           <WorkSelect selected={work} setWork={setWork}/>
         </div>
-        <Button type="submit" className="text-xl">
+        <Button type="submit" className="text-base">
           検索する
         </Button>
       </div>

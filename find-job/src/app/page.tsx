@@ -21,7 +21,7 @@ const Home: React.FC = () => {
           <p className='text-white md:text-xl text-base text-center mt-2'>
             このサイトについてアンケートのご協力をお願いします！
           </p>
-          <Button type="submit">
+          <Button type="submit" className='text-xs'>
             アンケートに答える
           </Button>
         </div>
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
               </p>
             </div>
             <div className='flex'>
-              <Button type="submit">
+              <Button type="submit" className='text-xs'>
                 アンケートに答える
               </Button>
             </div>
