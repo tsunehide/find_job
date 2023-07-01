@@ -3,7 +3,7 @@ import { useState } from 'react';
 import WorkDetail from '../components/Workdetail';
 
 
-const Result: React.FC = () => {
+const Result: React.FC = async () => {
   type Work = {
     id: number;
     name: string;
@@ -66,6 +66,7 @@ const Result: React.FC = () => {
       require: "明るく元気な人！ベテランから学生までいろんな人が働いています！美味しい賄いつき！"
     }
   ]
+  
 
   return (
     <>
