@@ -10,6 +10,11 @@ const WorkImage = ({ title, url }: { title: string, url:string }) => {
 }
 
 const WorkItem = () => {
+  const toggleModal = (e: React.MouseEvent) => {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  }
+
   return (
     <>
       <div className='flex flex-col group'>

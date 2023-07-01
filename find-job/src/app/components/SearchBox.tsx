@@ -2,6 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import {Work, WorkSelect } from "./WorkSelect";
+import Button from "./Button";
 
 const SearchBox = () => {
   const [work, setWork] = useState<Work | null>(null);
@@ -15,9 +16,9 @@ const SearchBox = () => {
           </div>
           <WorkSelect selected={work} setWork={setWork}/>
         </div>
-        <button type="submit" className=' text-sm px-10 py-2 bg-white text-primary rounded-full tracking-wide mt-7 mb-3 hover:opacity-80 transition-opacity duration-500 ease-out'>
+        <Button type="submit" className="text-xl">
           検索する
-        </button>
+        </Button>
       </div>
     </>
   );

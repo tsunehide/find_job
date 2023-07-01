@@ -1,6 +1,8 @@
-import WorkItem from './components/WorkItem';
 import React from 'react';
+import WorkItem from './components/WorkItem';
 import SearchBox from './components/SearchBox';
+import Button from './components/Button';
+
 const Home: React.FC = () => {
   return (
     <>
@@ -19,9 +21,9 @@ const Home: React.FC = () => {
           <p className='text-white md:text-xl text-base text-center mt-2'>
             このサイトについてアンケートのご協力をお願いします！
           </p>
-          <button type="submit" className='text-xs px-5 py-2 bg-white text-primary rounded-full tracking-wide mx-auto mt-7 hover:opacity-80 transition-opacity duration-500 ease-out'>
+          <Button type="submit">
             アンケートに答える
-          </button>
+          </Button>
         </div>
         <div className=' relative bg-primary clip'>
           <style>{`.clip {clip-path: inset(1px round 12px);}`}</style>
@@ -36,9 +38,9 @@ const Home: React.FC = () => {
               </p>
             </div>
             <div className='flex'>
-              <button type="submit" className='text-[10px] px-5 py-2 bg-white text-primary rounded-full tracking-wide mx-auto mt-10 hover:opacity-80 transition-opacity duration-500 ease-out'>
+              <Button type="submit">
                 アンケートに答える
-              </button>
+              </Button>
             </div>
           </div>
           <div className=' absolute -z-10 md:top-[-80px] top-[-40px] md:right-20 right-10 md:w-[320px] w-[260px] md:h-[320px] h-[260px] bg-white opacity-50 rounded-[50%]'>
