@@ -16,7 +16,9 @@ const Home: React.FC = () => {
             </div>
             <WorkSelect selected={work} setWork={setWork}/>
           </div>
-          <button type="submit" className=' text-sm px-10 py-2 bg-white text-primary rounded-full tracking-wide mt-7 mb-3'>検索する</button>
+          <button type="submit" className=' text-sm px-10 py-2 bg-white text-primary rounded-full tracking-wide mt-7 mb-3 hover:opacity-80 transition-opacity duration-500 ease-out'>
+            検索する
+          </button>
         </div>
         {/* flexを使ってタイル型に3列でWorkItemコンポーネントを配置 */}
         <div className="grid md:grid-cols-3 grid-cols-2 md:gap-5 gap-6 mt-16">
@@ -27,11 +29,13 @@ const Home: React.FC = () => {
           <WorkItem/> 
           <WorkItem/>
         </div>
-        <div className='flex flex-col  px-16 md:pt-20 pt-16 pb-10 bg-primary mt-14 rounded-xl'>
+        <div className='flex flex-col  px-16 py-16 bg-primary mt-14 rounded-xl'>
           <p className='text-white md:text-xl text-base text-center mt-2'>
             このサイトについてアンケートのご協力をお願いします！
           </p>
-          <button type="submit" className='text-xs px-5 py-2 bg-white text-primary rounded-full tracking-wide mx-auto mt-7'>アンケートに答える</button>
+          <button type="submit" className='text-xs px-5 py-2 bg-white text-primary rounded-full tracking-wide mx-auto mt-7 hover:opacity-80 transition-opacity duration-500 ease-out'>
+            アンケートに答える
+          </button>
         </div>
         <div className=' relative bg-primary clip'>
           <style>
@@ -41,7 +45,7 @@ const Home: React.FC = () => {
               }
             `}
           </style>
-          <div className='flex flex-row justify-between  px-16 md:pt-20 pt-16 pb-12 mt-14'>
+          <div className='flex flex-row justify-between  px-16 py-16  mt-14'>
             <div className='flex flex-col'>
               <p className='text-white text-xl text-left'>
                 あなたにピッタリな<br></br>
@@ -52,7 +56,9 @@ const Home: React.FC = () => {
               </p>
             </div>
             <div className='flex'>
-              <button type="submit" className='text-[10px] px-5 py-2 bg-white text-primary rounded-full tracking-wide mx-auto mt-10'>アンケートに答える</button>
+              <button type="submit" className='text-[10px] px-5 py-2 bg-white text-primary rounded-full tracking-wide mx-auto mt-10 hover:opacity-80 transition-opacity duration-500 ease-out'>
+                アンケートに答える
+              </button>
             </div>
           </div>
           <div className=' absolute -z-10 md:top-[-80px] top-[-30px] md:right-20 right-10 md:w-[320px] w-[240px] md:h-[320px] h-[240px] bg-white opacity-50 rounded-[50%]'>
