@@ -4,6 +4,10 @@ import Select from 'react-select'
 import style from './WorkSelect.module.scss'
 import Image from 'next/image'
 
+// 検索ボックスのセレクトボックスのコンポーネント
+// 参考サイト
+// https://dev.classmethod.jp/articles/react-select/
+
 export type UseSelectProps = {
   selected: Work | null;
   setWork: (user: Work | null) => void;
@@ -47,6 +51,7 @@ type WorkOption = {
   salary: number;
 }
 
+
 function convertToWork(args: WorkOption | null): Work | null {
   if (!args) return null;
   return {
@@ -63,11 +68,13 @@ function convertToOption(work: Work): WorkOption {
   };
 }
 
+// セレクトボックスのこのアイコン　⇒　▼
 const renderIcon = () => {
   return (
     <Image src="/dropdown.svg" width={10} height={10} alt={''} className='w-[10px] h-[10px]'/>
   )
 }
+
 
 export const WorkSelect: React.FC<UseSelectProps> = ({selected, setWork}) => {
   const value = useMemo(
@@ -89,7 +96,6 @@ export const WorkSelect: React.FC<UseSelectProps> = ({selected, setWork}) => {
         value={value}
         onChange={onChange}
         options={sampleData.map(convertToOption)}
-        // arrowRenderer={renderIcon}
         components={{
           IndicatorSeparator: () => null,
           DropdownIndicator:() => renderIcon(),

@@ -6,6 +6,8 @@ import Modal from './modal/Modal';
 import Panel from './modal/Panel';
 import { useBodyFixed } from '../hooks/useBodyFixed';
 
+// Topページのタイル型の仕事一覧のコンポーネント
+
 
 const WorkImage = ({ title, url }: { title: string, url:string }) => {
   return (
@@ -14,9 +16,13 @@ const WorkImage = ({ title, url }: { title: string, url:string }) => {
 }
 
 const WorkItem = () => {
+  // bodyの固定を管理するstate、Trueの時は固定
   const { bodyFixed, setBodyFixed } = useBodyFixed();
+
+  // モーダルの開閉状態を管理するstate
   const [isOpenModal, setIsOpenModal] = useState(false);
 
+  // モーダルを開閉する関数
   const toggleModal = (e: any) => {
     console.log(e.target);
     if (e.target === e.currentTarget) {

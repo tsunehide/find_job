@@ -1,5 +1,9 @@
 import React, { Children } from 'react';
 
+// 仕事詳細パネルのコンポーネント
+// オブジェクト型のデータをPropsで引数として受け取る。
+// TOPページの仕事一覧のモーダル画面と、検索結果画面で使いまわす。
+
 type Work = {
   id: number;
   name: string;

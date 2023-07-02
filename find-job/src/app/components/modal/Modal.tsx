@@ -3,13 +3,18 @@ import React from "react";
 import { useState } from "react";
 import Panel from "./Panel";
 
+// モーダルの開閉制御のコンポーネント
+// パネル表示部分はPanel.tsxに記述
+
 type Props = {
   close: any;
   children: React.ReactNode;
 };
 
 const Modal: React.FC<Props> = props => {
+  // モーダルの開閉状態、isMouseDownがtrueの時はモーダルを閉じる
   const [isMouseDown, setIsMouseDown] = useState(false);
+
 
   const onMouseDown = (e: any) => {
     if (e.target === e.currentTarget) {

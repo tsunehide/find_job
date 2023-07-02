@@ -3,6 +3,8 @@ import WorkDetail from "../Workdetail";
 import { IoCloseOutline } from "react-icons/io5";
 import { IconContext } from 'react-icons';
 
+// モーダルのパネル部分のコンポーネント
+// WorkDetailコンポーネント+右上のバツボタンで構成
 
 type Props = {
   close?: any;

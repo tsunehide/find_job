@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
+// モーダル表示時にスクロールを固定するためのカスタムフック
+
 const isIOSUserAgent = () => {
   const ua = window.navigator.userAgent.toLowerCase();
   const isIOS =
