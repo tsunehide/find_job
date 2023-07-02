@@ -3,19 +3,21 @@
 
 ## リポジトリをクローン
 ```
-git clone https://github.com/smaru1111/find_job
+git clone https://github.com/smaru1111/find_job_fe
 ```
 
 ## ローカルの起動
 Nodo.jsが入ってない人は、インストールしてください。<br>
 https://nodejs.org/ja
+
+入ってるか確認
 ```
 node -v
 ```
 
-### npm start
+### npm run dev
 ```
 cd find-job
 npm i
-npm start
+npm run dev
 ```
