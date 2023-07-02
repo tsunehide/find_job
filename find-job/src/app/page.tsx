@@ -39,7 +39,7 @@ const Home: React.FC = () => {
             </div>
             <div className='flex'>
               <Button type="submit" className='text-xs'>
-                アンケートに答える
+                投稿依頼をする
               </Button>
             </div>
           </div>

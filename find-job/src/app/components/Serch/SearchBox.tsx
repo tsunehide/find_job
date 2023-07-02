@@ -3,9 +3,18 @@ import React from "react";
 import { useState } from "react";
 import {Work, WorkSelect } from "./WorkSelect";
 import Button from "../Button";
+import { useRouter } from "next/navigation";
 
 const SearchBox = () => {
+  // 検索ボックスの選択中の値
   const [work, setWork] = useState<Work | null>(null);
+
+  // 検索ボタンを押したときの処理
+  const router = useRouter();
+  const handleClick = () => {
+    router.push("/result");
+  };
+
   return (
     <>
       <div className="flex flex-col justify-center items-center mt-20 w-full md:px-14 px-8 py-7 rounded-xl text-white bg-primary">
@@ -16,7 +25,7 @@ const SearchBox = () => {
           </div>
           <WorkSelect selected={work} setWork={setWork}/>
         </div>
-        <Button type="submit" className="text-base">
+        <Button type="submit" className="text-base" onClick={handleClick}>
           検索する
         </Button>
       </div>
