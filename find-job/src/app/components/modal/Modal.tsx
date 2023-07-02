@@ -26,7 +26,7 @@ const Modal: React.FC<Props> = props => {
 
   return (
     <div
-      className=" fixed top-0 left-0 w-full h-full bg-white bg-opacity-40 flex justify-center items-center z-40"
+      className=" fixed top-0 left-0 w-full h-full bg-white bg-opacity-40 flex justify-center items-center z-40 overflow-x-hidden overflow-y-auto"
       onMouseDown={onMouseDown}
       onMouseUp={onMouseUp}
     >

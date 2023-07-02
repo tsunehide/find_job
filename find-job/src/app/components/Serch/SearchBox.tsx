@@ -2,7 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import {Work, WorkSelect } from "./WorkSelect";
-import Button from "./Button";
+import Button from "../Button";
 
 const SearchBox = () => {
   const [work, setWork] = useState<Work | null>(null);
