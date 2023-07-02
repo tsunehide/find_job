@@ -1,8 +1,8 @@
 import './globals.scss'
 import { Sawarabi_Gothic } from "next/font/google"
 import React from 'react'
-import Header from "./components/Header"
-import Footer from "./components/Footer"
+import Header from "./components/layers/Header"
+import Footer from "./components/layers/Footer"
 
 const Sawarabi = Sawarabi_Gothic({
   weight: "400",

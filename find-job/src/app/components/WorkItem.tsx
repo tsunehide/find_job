@@ -4,9 +4,9 @@ import Image from 'next/image';
 import { useState } from 'react';
 import Modal from './modal/Modal';
 import Panel from './modal/Panel';
+import { useBodyFixed } from '../hooks/useBodyFixed';
 
 
-// const WorkImage = (title: string, url:string) => {
 const WorkImage = ({ title, url }: { title: string, url:string }) => {
   return (
     <Image src={url} width={385} height={245} alt={title} className='group-hover:scale-110 group-hover:opacity-80 transition-all duration-500 ease-out'/>
@@ -14,18 +14,21 @@ const WorkImage = ({ title, url }: { title: string, url:string }) => {
 }
 
 const WorkItem = () => {
+  const { bodyFixed, setBodyFixed } = useBodyFixed();
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   const toggleModal = (e: any) => {
     console.log(e.target);
     if (e.target === e.currentTarget) {
       setIsOpenModal(!isOpenModal);
+      setBodyFixed(!bodyFixed);
     }
   };
 
   return (
     <>
-      <div className='flex flex-col group' onClick={toggleModal}>
+      <div className='flex flex-col group' 
+           onClick={toggleModal}>
         <div className=" -z-10">
           <div className='flex justify-center rounded-t-md overflow-hidden'>
             <WorkImage title="aaa" url="https://picsum.photos/385/245"/>
@@ -37,7 +40,7 @@ const WorkItem = () => {
         </div>
       </div>
       {isOpenModal && (
-        <Modal close={toggleModal}>
+        <Modal close={toggleModal} >
           <Panel />
         </Modal>
       )}

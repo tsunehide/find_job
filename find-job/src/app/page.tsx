@@ -1,6 +1,6 @@
 import React from 'react';
 import WorkItem from './components/WorkItem';
-import SearchBox from './components/SearchBox';
+import SearchBox from './components/Serch/SearchBox';
 import Button from './components/Button';
 
 const Home: React.FC = () => {

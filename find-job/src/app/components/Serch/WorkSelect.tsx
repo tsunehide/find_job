@@ -62,6 +62,7 @@ function convertToOption(work: Work): WorkOption {
     salary: work.salary,
   };
 }
+
 const renderIcon = () => {
   return (
     <Image src="/dropdown.svg" width={10} height={10} alt={''} className='w-[10px] h-[10px]'/>
