@@ -2,6 +2,7 @@ import React from 'react';
 import WorkItem from './components/WorkItem';
 import SearchBox from './components/Serch/SearchBox';
 import Button from './components/Button';
+import Survey from './components/Survey';
 
 const Home: React.FC = () => {
   return (
@@ -17,14 +18,7 @@ const Home: React.FC = () => {
           <WorkItem/> 
           <WorkItem/>
         </div>
-        <div className='flex flex-col  px-16 py-16 bg-primary mt-14 rounded-xl'>
-          <p className='text-white md:text-xl text-base text-center mt-2'>
-            このサイトについてアンケートのご協力をお願いします！
-          </p>
-          <Button type="submit" className='text-xs'>
-            アンケートに答える
-          </Button>
-        </div>
+        <Survey/>
         <div className=' relative bg-primary clip'>
           <style>{`.clip {clip-path: inset(1px round 12px);}`}</style>
           <div className='flex flex-row justify-between  px-16 py-16  mt-14'>
