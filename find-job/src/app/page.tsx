@@ -8,9 +8,10 @@ const Home: React.FC = () => {
   return (
     <>
       <div className="flex-col justify-center h-auto my-0 md:mx-auto mx-0 md:px-14 px-8 max-w-5xl">
+        {/* 検索ボックス */}
         <SearchBox/>
-        {/* flexを使ってタイル型に3列でWorkItemコンポーネントを配置 */}
         <div className="grid md:grid-cols-3 grid-cols-2 md:gap-5 gap-6 mt-16">
+          {/* 仕事一覧 */}
           <WorkItem/>
           <WorkItem/>
           <WorkItem/>
@@ -18,8 +19,10 @@ const Home: React.FC = () => {
           <WorkItem/> 
           <WorkItem/>
         </div>
+        {/* アンケートパネル */}
         <Survey/>
         <div className=' relative bg-primary clip'>
+          {/* 求人掲載パネル 、多分使われない*/}
           <style>{`.clip {clip-path: inset(1px round 12px);}`}</style>
           <div className='flex flex-row justify-between  px-16 py-16  mt-14'>
             <div className='flex flex-col'>

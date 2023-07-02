@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import WorkDetail from '../components/Workdetail';
 
+// 検索結果画面
 
 const Result: React.FC = async () => {
   type Work = {
@@ -14,6 +15,7 @@ const Result: React.FC = async () => {
     place: string;
     require: string;
   }
+
   const worklist: Work[] = [
     {
       id: 1,
