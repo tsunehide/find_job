@@ -40,8 +40,8 @@ const WorkItem = () => {
             <WorkImage title="aaa" url="https://picsum.photos/385/245"/>
           </div>
           <div className='flex flex-col bg-primary rounded-b-md px-7 py-6'>
-            <p className='text-white md:text-[9px] lg:text-xs text-center font-bold'>＜求人＞ホールスタッフ募集中</p>
-            <p className='text-white text-[5px] text-center mt-2 tracking-widest'>大学生が多く働いています。一緒に楽しく働きませんか？</p>
+            <p className='text-white md:text-sm text-center font-bold'>＜求人＞ホールスタッフ募集中</p>
+            <p className='text-white text-[5px] text-center mt-2'>大学生が多く働いています。一緒に楽しく働きませんか？</p>
           </div>
         </div>
       </div>
