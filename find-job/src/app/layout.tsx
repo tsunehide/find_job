@@ -1,14 +1,14 @@
-import './globals.scss'
-import { Sawarabi_Gothic } from "next/font/google"
-import React from 'react'
-import Header from "./components/layers/Header"
-import Footer from "./components/layers/Footer"
+import './globals.scss';
+import { Noto_Sans_JP } from "@next/font/google";
+import React from 'react';
+import Header from "./components/layers/Header";
+import Footer from "./components/layers/Footer";
 
-const Sawarabi = Sawarabi_Gothic({
-  weight: "400",
-  display: "swap",
-  preload: false,
-})
+const notojp = Noto_Sans_JP({
+  weight: '700', // あなたが必要とするウェイトを指定します
+  subsets: ['latin'], // 必要なサブセットを指定します
+  display: 'swap', // フォントの表示方法を指定します
+});
 
 export const metadata = {
   title: 'Create Next App',
@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={Sawarabi.className}>
+      <body className={notojp.className}>
         <Header></Header>
         {children}
         <Footer></Footer>
