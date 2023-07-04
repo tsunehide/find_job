@@ -25,7 +25,7 @@ const SearchBox = () => {
           </div>
           <WorkSelect selected={work} setWork={setWork}/>
         </div>
-        <Button type="submit" className="text-base" onClick={handleClick}>
+        <Button type="submit" className="text-base md:!px-10 !px-8" onClick={handleClick}>
           検索する
         </Button>
       </div>

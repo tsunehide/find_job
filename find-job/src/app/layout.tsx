@@ -5,7 +5,7 @@ import Header from "./components/layers/Header";
 import Footer from "./components/layers/Footer";
 
 const notojp = Noto_Sans_JP({
-  weight: '700', // あなたが必要とするウェイトを指定します
+  weight: '500', // あなたが必要とするウェイトを指定します
   subsets: ['latin'], // 必要なサブセットを指定します
   display: 'swap', // フォントの表示方法を指定します
 });
@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={notojp.className}>
+      <body className={`${notojp.className}`+" tracking-widest"}>
         <Header></Header>
         {children}
         <Footer></Footer>
