@@ -36,7 +36,7 @@ const Home: React.FC = () => {
             </div>
             {/* 外部フォームに遷移 */}
             <div className='flex'>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVk0oUKfcUwaAilIpjue98KHPhu3KXFKF3W4EgcjcO8GVrdA/viewform?embedded=true">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVk0oUKfcUwaAilIpjue98KHPhu3KXFKF3W4EgcjcO8GVrdA/viewform?embedded=true" target="_blank">
                 <Button type="submit" className='text-xs'>
                   投稿依頼をする
                 </Button>
