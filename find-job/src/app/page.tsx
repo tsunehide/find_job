@@ -34,10 +34,13 @@ const Home: React.FC = () => {
                 サイトに求人情報を掲載しませんか？
               </p>
             </div>
+            {/* 外部フォームに遷移 */}
             <div className='flex'>
-              <Button type="submit" className='text-xs'>
-                投稿依頼をする
-              </Button>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVk0oUKfcUwaAilIpjue98KHPhu3KXFKF3W4EgcjcO8GVrdA/viewform?embedded=true">
+                <Button type="submit" className='text-xs'>
+                  投稿依頼をする
+                </Button>
+              </a>
             </div>
           </div>
           <div className=' absolute -z-10 md:top-[-80px] top-[-40px] md:right-20 right-10 md:w-[320px] w-[260px] md:h-[320px] h-[260px] bg-white opacity-50 rounded-[50%]'>
