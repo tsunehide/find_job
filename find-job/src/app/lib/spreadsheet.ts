@@ -6,9 +6,9 @@ const getSheets = () => {
   const googleapis = new GoogleApis();
   const scopes = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
   const jwt = new googleapis.auth.JWT(
-    process.env.GCP_SERVICEACCOUNT_EMAIL,
+    process.env.NEXT_PUBLIC_GCP_SERVICEACCOUNT_EMAIL,
     undefined,
-    (process.env.GCP_SERVICEACCOUNT_PRIVATE_KEY || '').replace(/\\n/g, '\n'),
+    (process.env.NEXT_PUBLIC_GCP_SERVICEACCOUNT_PRIVATE_KEY || '').replace(/\\n/g, '\n'),
     scopes
   );
   return google.sheets({ version: 'v4', auth: jwt });
@@ -17,7 +17,7 @@ const getSheets = () => {
 export const getContents = async (): Promise<Work[]> => {
   const sheets = getSheets();
   const response = await sheets.spreadsheets.values.get({
-    spreadsheetId: process.env.SPREADSHEET_ID,
+    spreadsheetId: process.env.NEXT_PUBLIC_SPREADSHEET_ID,
     range: 'contents',
   });
   const rows = response.data.values;

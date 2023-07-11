@@ -3,8 +3,17 @@ import WorkItem from './components/WorkItem';
 import SearchBox from './components/Serch/SearchBox';
 import Button from './components/Button';
 import Survey from './components/Survey';
+import { getContents } from './lib/spreadsheet';
 
-const Home: React.FC = () => {
+async function getContent() {
+  const contents = await getContents();
+  return {
+    contents
+  };
+}
+const Home: React.FC = async () => {
+  const content = await getContent();
+  console.log(content);
   return (
     <>
       <div className="flex-col justify-center h-auto my-0 md:mx-auto mx-0 md:px-14 px-8 max-w-5xl">
@@ -12,12 +21,10 @@ const Home: React.FC = () => {
         <SearchBox/>
         <div className="grid md:grid-cols-3 grid-cols-2 md:gap-5 gap-6 mt-16">
           {/* 仕事一覧 */}
-          <WorkItem/>
-          <WorkItem/>
-          <WorkItem/>
-          <WorkItem/>
-          <WorkItem/> 
-          <WorkItem/>
+          {
+
+          }
+
         </div>
         {/* アンケートパネル */}
         <Survey/>
