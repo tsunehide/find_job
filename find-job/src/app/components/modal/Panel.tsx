@@ -2,6 +2,7 @@ import React from "react";
 import WorkDetail from "../Workdetail";
 import { IoCloseOutline } from "react-icons/io5";
 import { IconContext } from 'react-icons';
+import { Work } from "../../lib/contents";
 
 // モーダルのパネル部分のコンポーネント
 // WorkDetailコンポーネント+右上のバツボタンで構成
@@ -10,16 +11,9 @@ type Props = {
   close?: any;
 };
 
-type Work = {
-  id: number;
-  name: string;
-  Elements: string;
-  salary: number;
-  time: string;
-  people: string;
-  place: string;
-  require: string;
-};
+
+
+
 
 const worklist: Work[] = [
   {
