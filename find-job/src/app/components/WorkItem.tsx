@@ -5,9 +5,13 @@ import { useState } from 'react';
 import Modal from './modal/Modal';
 import Panel from './modal/Panel';
 import { useBodyFixed } from '../hooks/useBodyFixed';
+import { Work } from '../lib/contents';
 
 // Topページのタイル型の仕事一覧のコンポーネント
 
+interface contentProps {
+  content: Work
+}
 
 const WorkImage = ({ title, url }: { title: string, url:string }) => {
   return (
@@ -15,7 +19,8 @@ const WorkImage = ({ title, url }: { title: string, url:string }) => {
   )
 }
 
-const WorkItem = () => {
+const WorkItem = ({content}:contentProps) => {
+
   // bodyの固定を管理するstate、Trueの時は固定
   const { bodyFixed, setBodyFixed } = useBodyFixed();
 
@@ -46,9 +51,7 @@ const WorkItem = () => {
         </div>
       </div>
       {isOpenModal && (
-        <Modal close={toggleModal} >
-          <Panel />
-        </Modal>
+        <Modal content={content} close={toggleModal} />
       )}
     </>
   );

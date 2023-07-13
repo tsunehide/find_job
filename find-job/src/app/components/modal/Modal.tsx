@@ -2,13 +2,14 @@
 import React from "react";
 import { useState } from "react";
 import Panel from "./Panel";
+import { Work } from "../../lib/contents";
 
 // モーダルの開閉制御のコンポーネント
 // パネル表示部分はPanel.tsxに記述
 
 type Props = {
+  content:Work;
   close: any;
-  children: React.ReactNode;
 };
 
 const Modal: React.FC<Props> = props => {
@@ -35,7 +36,7 @@ const Modal: React.FC<Props> = props => {
       onMouseDown={onMouseDown}
       onMouseUp={onMouseUp}
     >
-      <Panel close={props.close}/>
+      <Panel content={props.content} close={props.close}/>
     </div>
   );
 };

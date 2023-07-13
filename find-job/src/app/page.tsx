@@ -1,9 +1,9 @@
 import React from 'react';
-import WorkItem from './components/WorkItem';
 import SearchBox from './components/Serch/SearchBox';
 import Button from './components/Button';
 import Survey from './components/Survey';
 import { getContents } from './lib/spreadsheet';
+import WorkList from './components/WorkList';
 
 async function getContent() {
   const contents = await getContents();
@@ -21,10 +21,7 @@ const Home: React.FC = async () => {
         <SearchBox/>
         <div className="grid md:grid-cols-3 grid-cols-2 md:gap-5 gap-6 mt-16">
           {/* 仕事一覧 */}
-          {
-
-          }
-
+          <WorkList contentlist={content.contents}/>
         </div>
         {/* アンケートパネル */}
         <Survey/>
