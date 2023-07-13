@@ -25,13 +25,13 @@ export const getContents = async (): Promise<Work[]> => {
     return rows.slice(1).map((row) => {
       return {
         id: row[0],
-        name: row[1],
-        Elements: row[2],
-        salary: row[3],
-        time: row[4],
-        people: row[5],
-        place: row[6],
-        require: row[7],
+        name: row[3],
+        Elements: row[4],
+        salary: row[5],
+        time: row[6],
+        people: row[7],
+        place: row[8],
+        require: row[9],
       };
     });
   }

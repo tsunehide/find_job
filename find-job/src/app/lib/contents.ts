@@ -8,7 +8,7 @@
 // }
 
 export type Work = {
-  id: number;
+  timestamp: number;
   name: string;
   Elements: string;
   salary: number;
