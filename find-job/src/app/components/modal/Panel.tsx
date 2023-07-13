@@ -12,9 +12,6 @@ type Props = {
   close?: any;
 };
 
-interface contentProps {
-  content: Work
-}
 
 const Panel: React.FC<Props> = props => {
   return (
