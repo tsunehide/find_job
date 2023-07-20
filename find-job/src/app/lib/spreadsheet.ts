@@ -24,7 +24,7 @@ export const getContents = async (): Promise<Work[]> => {
   if (rows) {
     return rows.slice(1).map((row) => {
       return {
-        id: row[0],
+        timestamp: row[0],
         name: row[3],
         Elements: row[4],
         salary: row[5],
