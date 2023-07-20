@@ -36,7 +36,7 @@ const WorkDetail = ({content}: contentDetalProps) => {
                   賃金
                 </th>
                 <td className='text-left text-black px-6 py-3'>
-                  {content.salary}
+                  時給{content.salary}円
                 </td>
               </tr>
               <tr className='items-center border-b-[1.5px] border-b-secondary'>
