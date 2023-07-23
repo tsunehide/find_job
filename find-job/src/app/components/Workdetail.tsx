@@ -1,21 +1,19 @@
 import React, { Children } from 'react';
+import { Work } from '../lib/contents';
 
 // 仕事詳細パネルのコンポーネント
 // オブジェクト型のデータをPropsで引数として受け取る。
 // TOPページの仕事一覧のモーダル画面と、検索結果画面で使いまわす。
 
-type Work = {
-  id: number;
-  name: string;
-  Elements: string;
-  salary: number;
-  time: string;
-  people: string;
-  place: string;
-  require: string;
+interface contentDetalProps {
+  content:Work
 }
 
-const WorkDetail = (props: Work) => {
+const WorkDetail = ({content}: contentDetalProps) => {
+  function convertTimeFormat(input: string): string {
+    return input.replace(/(\d{2})(\d{2})~(\d{2})(\d{2})/, '$1:$2~$3:$4');
+  }
+  const time = convertTimeFormat(content.time);
   return (
     <>
       <div className=' bg-primary py-6 px-3 rounded-lg mt-5'>
@@ -30,7 +28,7 @@ const WorkDetail = (props: Work) => {
                   仕事内容
                 </th>
                 <td className='text-left text-black px-6 py-3'>
-                  {props.Elements}
+                  {content.Elements}
                 </td>
               </tr>
               <tr className='items-center border-b-[1.5px] border-b-secondary'>
@@ -42,7 +40,7 @@ const WorkDetail = (props: Work) => {
                   賃金
                 </th>
                 <td className='text-left text-black px-6 py-3'>
-                  {props.salary}
+                  時給{content.salary}円
                 </td>
               </tr>
               <tr className='items-center border-b-[1.5px] border-b-secondary'>
@@ -54,7 +52,7 @@ const WorkDetail = (props: Work) => {
                   時間
                 </th>
                 <td className='text-left text-black px-6 py-3'>
-                  {props.time}
+                  {time}
                 </td>
               </tr>
               <tr className='items-center border-b-[1.5px] border-b-secondary'>
@@ -66,7 +64,7 @@ const WorkDetail = (props: Work) => {
                   採用人数
                 </th>
                 <td className='text-left text-black px-6 py-3'>
-                  {props.people}
+                  {content.people}人
                 </td>
               </tr>
               <tr className='items-center border-b-[1.5px] border-b-secondary'>
@@ -78,7 +76,7 @@ const WorkDetail = (props: Work) => {
                   勤務地
                 </th>
                 <td className='text-left text-black px-6 py-3'>
-                  {props.place}
+                  {content.place}
                 </td>
               </tr>
               <tr className='items-center border-b-[1.5px] border-b-secondary'>
@@ -90,7 +88,7 @@ const WorkDetail = (props: Work) => {
                   希望条件
                 </th>
                 <td className='text-left text-black px-6 py-3'>
-                  {props.require}
+                  {content.require}
                 </td>
               </tr>
             </tbody>

@@ -1,10 +1,19 @@
 import React from 'react';
-import WorkItem from './components/WorkItem';
 import SearchBox from './components/Serch/SearchBox';
 import Button from './components/Button';
 import Survey from './components/Survey';
+import { getContents } from './lib/spreadsheet';
+import WorkList from './components/WorkList';
 
-const Home: React.FC = () => {
+async function getContent() {
+  const contents = await getContents();
+  return {
+    contents
+  };
+}
+const Home: React.FC = async () => {
+  const content = await getContent();
+  console.log(content);
   return (
     <>
       <div className="flex-col justify-center h-auto my-0 md:mx-auto mx-0 md:px-14 px-8 max-w-5xl">
@@ -12,12 +21,7 @@ const Home: React.FC = () => {
         <SearchBox/>
         <div className="grid md:grid-cols-3 grid-cols-2 md:gap-5 gap-6 mt-16">
           {/* 仕事一覧 */}
-          <WorkItem/>
-          <WorkItem/>
-          <WorkItem/>
-          <WorkItem/>
-          <WorkItem/> 
-          <WorkItem/>
+          <WorkList contentlist={content.contents}/>
         </div>
         {/* アンケートパネル */}
         <Survey/>
@@ -34,10 +38,13 @@ const Home: React.FC = () => {
                 サイトに求人情報を掲載しませんか？
               </p>
             </div>
+            {/* 外部フォームに遷移 */}
             <div className='flex'>
-              <Button type="submit" className='text-xs'>
-                投稿依頼をする
-              </Button>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVk0oUKfcUwaAilIpjue98KHPhu3KXFKF3W4EgcjcO8GVrdA/viewform?embedded=true" target="_blank">
+                <Button type="submit" className='text-xs'>
+                  投稿依頼をする
+                </Button>
+              </a>
             </div>
           </div>
           <div className=' absolute -z-10 md:top-[-80px] top-[-40px] md:right-20 right-10 md:w-[320px] w-[260px] md:h-[320px] h-[260px] bg-white opacity-50 rounded-[50%]'>

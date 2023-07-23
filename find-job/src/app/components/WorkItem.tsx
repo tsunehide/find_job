@@ -5,9 +5,13 @@ import { useState } from 'react';
 import Modal from './modal/Modal';
 import Panel from './modal/Panel';
 import { useBodyFixed } from '../hooks/useBodyFixed';
+import { Work } from '../lib/contents';
 
 // Topページのタイル型の仕事一覧のコンポーネント
 
+interface contentProps {
+  content: Work
+}
 
 const WorkImage = ({ title, url }: { title: string, url:string }) => {
   return (
@@ -15,7 +19,8 @@ const WorkImage = ({ title, url }: { title: string, url:string }) => {
   )
 }
 
-const WorkItem = () => {
+const WorkItem = ({content}:contentProps) => {
+
   // bodyの固定を管理するstate、Trueの時は固定
   const { bodyFixed, setBodyFixed } = useBodyFixed();
 
@@ -40,15 +45,13 @@ const WorkItem = () => {
             <WorkImage title="aaa" url="https://picsum.photos/385/245"/>
           </div>
           <div className='flex flex-col bg-primary rounded-b-md px-7 py-6'>
-            <p className='text-white md:text-sm text-center font-bold'>＜求人＞ホールスタッフ募集中</p>
-            <p className='text-white text-[5px] text-center mt-2'>大学生が多く働いています。一緒に楽しく働きませんか？</p>
+            <p className='text-white md:text-sm text-center font-bold'>{content.name}</p>
+            <p className='text-white text-[5px] text-center mt-2'>{content.Elements}</p>
           </div>
         </div>
       </div>
       {isOpenModal && (
-        <Modal close={toggleModal} >
-          <Panel />
-        </Modal>
+        <Modal content={content} close={toggleModal} />
       )}
     </>
   );
