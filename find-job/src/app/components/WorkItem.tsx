@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { useState } from 'react';
 import Modal from './modal/Modal';
@@ -45,8 +45,8 @@ const WorkItem = ({content}:contentProps) => {
             <WorkImage title="aaa" url="https://picsum.photos/385/245"/>
           </div>
           <div className='flex flex-col bg-primary rounded-b-md px-7 py-6'>
-            <p className='text-white md:text-sm text-center font-bold'>{content.name}</p>
-            <p className='text-white text-[5px] text-center mt-2'>{content.Elements}</p>
+            <p className='text-white md:text-sm text-center font-bold h-10'>{content.name}</p>
+            <p className='text-white text-[5px] text-center mt-2 h-8'>{content.Elements}</p>
           </div>
         </div>
       </div>
