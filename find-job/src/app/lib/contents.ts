@@ -8,12 +8,14 @@
 // }
 
 export type Work = {
-  timestamp: number;
-  name: string;
-  Elements: string;
-  salary: number;
-  time: string;
-  people: string;
-  place: string;
-  require: string;
-};
+    [x: string]: any;
+    timestamp: number;
+    name: string;
+    Elements: string;
+    salary: number;
+    time: string;
+    people: string;
+    place: string;
+    require: string;
+  };
+
