@@ -8,7 +8,7 @@ interface contentlist{
 export default function WorkList({contentlist}:contentlist){
   return (
     contentlist.map(content => (
-        <WorkItem content={content} />
+        <WorkItem key={content.id} content={content} />
     ))
-);
+  );
 }

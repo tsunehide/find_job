@@ -15,7 +15,7 @@ const ResultList = ({worklist}:worklistProps) => {
   return (
     worklist.map(contents => {
       if (contents.salary >= choice) {
-        return <WorkDetail  content={contents}/>;
+        return <WorkDetail key={contents.id} content={contents}/>;
       } else {
         return null;
       }
