@@ -4,16 +4,20 @@ import { useState } from "react";
 import {Work, WorkSelect } from "./WorkSelect";
 import Button from "../Button";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const SearchBox = () => {
   // 検索ボックスの選択中の値
   const [work, setWork] = useState<Work | null>(null);
 
   // 検索ボタンを押したときの処理
-  const router = useRouter();
-  const handleClick = () => {
-    router.push("/result");
-  };
+  // const router = useRouter();
+  // const handleClick = () => {
+    // router.push('/result',{
+    //   // pathname:"/result",   //URL
+    //   query: {input :work} //検索クエリ
+    // });
+  // };
 
   return (
     <>
@@ -25,9 +29,11 @@ const SearchBox = () => {
           </div>
           <WorkSelect selected={work} setWork={setWork}/>
         </div>
-        <Button type="submit" className="text-base md:!px-10 !px-8" onClick={handleClick}>
-          検索する
-        </Button>
+        <Link href={`/result?salary=${work?.salary}`}>
+          <Button type="submit" className="text-base md:!px-10 !px-8">
+            検索する
+          </Button>
+        </Link>
       </div>
     </>
   );
