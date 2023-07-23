@@ -60,7 +60,7 @@ const WorkDetail = ({content}: contentDetalProps) => {
                   採用人数
                 </th>
                 <td className='text-left text-black px-6 py-3'>
-                  {content.people}
+                  {content.people}人
                 </td>
               </tr>
               <tr className='items-center border-b-[1.5px] border-b-secondary'>
