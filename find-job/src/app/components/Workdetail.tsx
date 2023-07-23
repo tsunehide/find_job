@@ -10,6 +10,10 @@ interface contentDetalProps {
 }
 
 const WorkDetail = ({content}: contentDetalProps) => {
+  function convertTimeFormat(input: string): string {
+    return input.replace(/(\d{2})(\d{2})~(\d{2})(\d{2})/, '$1:$2~$3:$4');
+  }
+  const time = convertTimeFormat(content.time);
   return (
     <>
       <div className=' bg-primary py-6 px-3 rounded-lg mt-5'>
@@ -48,7 +52,7 @@ const WorkDetail = ({content}: contentDetalProps) => {
                   時間
                 </th>
                 <td className='text-left text-black px-6 py-3'>
-                  {content.time}
+                  {time}
                 </td>
               </tr>
               <tr className='items-center border-b-[1.5px] border-b-secondary'>
