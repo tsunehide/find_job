@@ -10,15 +10,6 @@ const SearchBox = () => {
   // 検索ボックスの選択中の値
   const [work, setWork] = useState<Work | null>(null);
 
-  // 検索ボタンを押したときの処理
-  // const router = useRouter();
-  // const handleClick = () => {
-    // router.push('/result',{
-    //   // pathname:"/result",   //URL
-    //   query: {input :work} //検索クエリ
-    // });
-  // };
-
   return (
     <>
       <div className="flex flex-col justify-center items-center mt-20 w-full md:px-14 px-8 py-7 rounded-xl text-white bg-primary">
