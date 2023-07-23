@@ -16,8 +16,8 @@ const WorkDetail = ({content}: contentDetalProps) => {
   const time = convertTimeFormat(content.time);
   return (
     <>
-      <div className=' bg-primary py-6 px-3 rounded-lg mt-5'>
-        <table className=' bg-white rounded-xl border-none last:[&_tr]:border-none mx-auto'>
+      <div className=' bg-primary py-6 px-3 rounded-lg mt-5 md:min-w-[750px] min-w-[300px]'>
+        <table className=' bg-white rounded-xl border-none last:[&_tr]:border-none mx-auto w-full'>
             <tbody>
               <tr className='items-center border-b-[1.5px] border-b-secondary'>
                 <th className='
