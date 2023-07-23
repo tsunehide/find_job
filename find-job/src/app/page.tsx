@@ -19,7 +19,7 @@ const Home: React.FC = async () => {
       <div className="flex-col justify-center h-auto my-0 md:mx-auto mx-0 md:px-14 px-8 max-w-5xl">
         {/* 検索ボックス */}
         <SearchBox/>
-        <div className="grid md:grid-cols-3 grid-cols-2 md:gap-5 gap-6 mt-16">
+        <div className="grid md:grid-cols-3 grid-cols-2 md:gap-5 gap-6 mt-16 items-stretch">
           {/* 仕事一覧 */}
           <WorkList contentlist={content.contents}/>
         </div>
