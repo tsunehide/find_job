@@ -1,9 +1,9 @@
-# find_job_fe
+# find_job
 アルバイト掲示板案件
 
 ## リポジトリをクローン
 ```
-git clone https://github.com/smaru1111/find_job_fe
+git clone https://github.com/job-forest/find_job
 ```
 
 ## ローカルの起動
