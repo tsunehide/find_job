@@ -3,7 +3,7 @@
 
 ## リポジトリをクローン
 ```
-git clone https://github.com/job-forest/find_job
+git clone https://github.com/tsunehide/find_job
 ```
 
 ## ローカルの起動
