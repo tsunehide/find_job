@@ -11,6 +11,7 @@ async function getContent() {
     contents
   };
 }
+
 const Home: React.FC = async () => {
   const content = await getContent();
   console.log(content);
